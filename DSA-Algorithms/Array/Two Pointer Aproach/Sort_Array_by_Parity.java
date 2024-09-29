@@ -12,7 +12,6 @@
  * 8 4 6 5 3 1 9 -> Sorting of array by parity
  */
 
-package Data_Structures_in_Java;
 import java.util.*;
 public class Sort_Array_by_Parity 
 {
