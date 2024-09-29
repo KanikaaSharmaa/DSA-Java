@@ -11,7 +11,6 @@
  * 
  * 8 4 6 5 3 1 9 -> Sorting of array by parity
  */
-
 import java.util.*;
 public class Sort_Array_by_Parity 
 {
