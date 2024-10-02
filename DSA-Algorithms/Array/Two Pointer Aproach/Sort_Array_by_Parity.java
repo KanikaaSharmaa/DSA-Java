@@ -1,20 +1,20 @@
-/* Sort an array consisting of only 0's and 1's
+/*
  * Sample Input
- * 9
- * 1 0 0 1 0 1 1 0 0
+ * 6 -> Size of an array
+ * 1 2 3 4 5 6 -> Elements of an array
  * 
- * 5
- * 1 0 1 0 0 
+ * 7 -> Size of an array
+ * 3 4 5 6 8 1 9 -> Elements of an array
  * 
  * Sample Output
- * 0 0 0 0 0 1 1 1 1
+ * 6 2 4 3 5 1 -> Sorting of array by parity
  * 
- * 0 0 0 1 1
+ * 8 4 6 5 3 1 9 -> Sorting of array by parity
  */
 
 package Data_Structures_in_Java;
 import java.util.*;
-public class Sort_0_and_1 
+public class Sort_Array_by_Parity 
 {
     public static int[] swap(int []arr,int left,int right)
     {
@@ -36,22 +36,26 @@ public class Sort_0_and_1
             arr[i]=scn.nextInt();
         }
         int left =0, right = n-1;
-        while(left<right)
+        while(left<right) 
         {
-            if(arr[left]==1 && arr[right]==0)
+            if(arr[left]%2==1 && arr[right]%2==0)
             {
                 swap(arr,left,right);
                 left++;
                 right--;
             }
-            if(arr[left]==0)
+            if(arr[left]%2 == 0)
+            {
                 left++;
-            if(arr[right]==1)
+            }
+            if(arr[right]%2 == 1)
+            {
                 right--;
-        }
+            }
+        }    
         for(int i=0;i<arr.length;i++)
         {
-            System.out.print(arr[i]+" ");
+            System.out.print(arr[i]);
         }
         scn.close();
     }    
